@@ -1,0 +1,68 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Transcripción del Ticket</title>
+    </head>
+    <body>
+        <div class="container">
+    
+            <div class="message">
+                <img src="https://cdn.discordapp.com/avatars/869075209624358953/111379d278d1a05adb0e843cc5c98d58.png?size=1024" alt="Avatar">
+                <strong>ᴘᴇʏᴏᴛᴇ ʀᴘ</strong>
+                <span><t:1733164500:F></span>
+                <p>&lt;@1244406192021831793&gt;</p>
+            </div>
+        
+            <div class="message">
+                <img src="https://cdn.discordapp.com/avatars/314967208373649410/f8a0cb6fd32030374569a0b5c537fef6.png?size=1024" alt="Avatar">
+                <strong>_jeferson_</strong>
+                <span><t:1733292654:F></span>
+                <p>import html
+
+async def generate_html_transcript(messages):
+    &quot;&quot;&quot;Generar transcripción HTML escapando contenido dinámico.&quot;&quot;&quot;
+    html_content = &#x27;&#x27;&#x27;
+    &lt;!DOCTYPE html&gt;
+    &lt;html&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;UTF-8&quot;&gt;
+        &lt;title&gt;Transcripción del Ticket&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;div class=&quot;container&quot;&gt;
+    &#x27;&#x27;&#x27;
+    for msg in messages:
+        timestamp = f&#x27;&lt;t:{int(msg.created_at.timestamp())}:F&gt;&#x27;
+        avatar_url = msg.author.avatar.url if msg.author.avatar else &quot;https://cdn.discordapp.com/embed/avatars/0.png&quot;
+        username = html.escape(msg.author.name)
+        content = html.escape(msg.content)
+
+        html_content += f&#x27;&#x27;&#x27;
+            &lt;div class=&quot;message&quot;&gt;
+                &lt;img src=&quot;{avatar_url}&quot; alt=&quot;Avatar&quot;&gt;
+                &lt;strong&gt;{username}&lt;/strong&gt;
+                &lt;span&gt;{timestamp}&lt;/span&gt;
+                &lt;p&gt;{content}&lt;/p&gt;
+            &lt;/div&gt;
+        &#x27;&#x27;&#x27;
+    html_content += &#x27;&#x27;&#x27;
+        &lt;/div&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;
+    &#x27;&#x27;&#x27;
+    return html_content</p>
+            </div>
+        
+            <div class="message">
+                <img src="https://cdn.discordapp.com/avatars/869075209624358953/111379d278d1a05adb0e843cc5c98d58.png?size=1024" alt="Avatar">
+                <strong>ᴘᴇʏᴏᴛᴇ ʀᴘ</strong>
+                <span><t:1733292663:F></span>
+                <p></p>
+            </div>
+        
+        </div>
+    </body>
+    </html>
+    
